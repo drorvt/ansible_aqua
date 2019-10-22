@@ -1,0 +1,20 @@
+---
+- name: Install our packages!
+  become: yes
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "{{ my_packages }}"
+
+- name: Remove packages
+  become: yes
+  package:
+    name: "{{ item }}"
+    state: absent
+  with_items:
+    - emacs
+    - nano
+
+- import_tasks: task2.yml
+...

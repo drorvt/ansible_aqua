@@ -1,0 +1,16 @@
+[local]
+localhost ansible_connection=local
+
+[fleet:children]
+node1
+node2
+node3
+
+[node1]
+35.243.111.214 ansible_connection=ssh ansible_ssh_user=aqua ansible_ssh_private_key_file=/home/dror/Documents/pem/auto_key_ssh.pem
+
+[node2]
+34.84.103.97 ansible_connection=ssh ansible_ssh_user=aqua ansible_ssh_private_key_file=/home/dror/Documents/pem/auto_key_ssh.pem
+
+[node3]
+34.85.3.3 ansible_connection=ssh ansible_ssh_user=aqua ansible_ssh_private_key_file=/home/dror/Documents/pem/auto_key_ssh.pem

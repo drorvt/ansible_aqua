@@ -1,0 +1,6 @@
+---
+- name: Show me the uptime
+  become: yes
+  shell: uptime
+  changed_when: "False"
+...
