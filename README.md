@@ -17,15 +17,6 @@ Install ansible and a yaml linter
 
 Adhoc commands
 
-    ansible all -i 192.168.3.177, -m ping -u phil -k
-
-    ansible all -i 192.168.3.177,192.168.3.97,192.168.3.77, -m ping -u phil -k
-
-Adhoc commands using an inventory
-
-    ansible -i inventory tom -m ping
-
-    ansiible -i inventory tom -m setup
 
 Targetting a group
 
@@ -39,6 +30,3 @@ Running your first playbook
 
     ansible-playbook -i inventory playbook.yml
 
-- - - -
-# Author
-[Phil Porada](https://philporada.com)
